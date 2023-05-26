@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server  "
+  },
+  "name": "orbital-2023-cyfer-backend",
+  "description": "backend for our Orbital project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wwweert123/Orbital-2023-Cyfer-backend.git"
+  },
+  "author": "Frederick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wwweert123/Orbital-2023-Cyfer-backend/issues"
+  },
+  "homepage": "https://github.com/wwweert123/Orbital-2023-Cyfer-backend#readme",
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

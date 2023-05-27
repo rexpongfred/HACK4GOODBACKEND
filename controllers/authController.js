@@ -57,7 +57,7 @@ const handleLogin = async (req, res) => {
             //secure: true,
             maxAge: 24 * 60 * 60 * 1000,
         });
-        res.json({ accessToken });
+        res.json({ roles, accessToken });
         //res.json({ success: `User ${user} is logged in!` });
     } else {
         res.sendStatus(401);

@@ -27,6 +27,7 @@ app.use(cookieParser());
 app.use("/", require("./routes/root"));
 app.use("/register", require("./routes/register"));
 app.use("/auth", require("./routes/auth"));
+app.use("/refresh", require("./routes/refresh"));
 
 app.use(verifyJWT);
 app.use("/secret", require("./routes/api/secretaccess"));

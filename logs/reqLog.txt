@@ -16,3 +16,11 @@
 20230527	13:49:06	d98858e6-dd97-49d3-aa8e-7104486ec505	POST	undefined	/register
 20230527	13:49:53	8916c0f2-cd3b-4a8c-9d07-b276bfc66ea4	POST	undefined	/register
 20230527	13:50:44	5870e478-ce27-48bb-9af6-7632a1f7365b	POST	undefined	/register
+20230527	14:35:48	b90a4c45-3459-4f6a-864d-e5971e75f979	POST	undefined	/register
+20230527	14:35:59	00f2abc6-d25a-4532-b86a-36b9288c1318	POST	undefined	/auth
+20230527	14:36:09	d3c685c7-d8af-4141-8f8b-1a347270263c	POST	undefined	/auth
+20230527	14:36:53	4d8da75b-50ac-42cf-9698-7988d575d74a	POST	undefined	/auth
+20230527	14:38:09	9d65d2be-8b7f-434b-8791-0fce3ef280ec	GET	undefined	/secret
+20230527	14:38:55	f4fc299d-8582-44f6-8202-8ae09a37355d	GET	undefined	/secret
+20230527	14:39:33	3b63ec14-6237-4e1b-8984-dfe9acdf593e	GET	undefined	/secret
+20230527	14:40:22	c8ff1133-38b4-47f7-9f6f-feb3f83a1c54	GET	undefined	/secret

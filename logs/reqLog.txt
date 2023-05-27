@@ -82,3 +82,9 @@
 20230527	17:50:01	f39158a4-7e37-480f-8d29-21b4b5afd69a	GET	undefined	/refresh
 20230527	17:50:14	fdbe7c86-395a-4c2d-aed7-dbc9e643e80d	GET	undefined	/logout
 20230527	17:50:18	230b4113-f604-44b7-87ea-5f323c98fd2b	GET	undefined	/refresh
+20230527	22:45:29	91d2a7f7-2620-479d-917f-b78309b4b713	OPTIONS	http://localhost:3000	/register
+20230527	22:45:49	e6429ef2-1c9c-4e45-a572-b06fb89aea89	OPTIONS	http://localhost:3000	/register
+20230527	22:48:35	79829734-2ca1-4912-9866-659d4a5902e9	OPTIONS	http://localhost:3000	/register
+20230527	22:48:35	80b4bc27-1a45-44a5-be43-2cce28024326	POST	http://localhost:3000	/register
+20230527	22:52:22	2eab84c6-0f33-4645-8dc3-020403454af3	OPTIONS	http://localhost:3000	/register
+20230527	22:52:22	00aa39bc-38fe-4771-9f51-242b095b64b0	POST	http://localhost:3000	/register

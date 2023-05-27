@@ -4,3 +4,5 @@
 20230527	12:19:26	930d4279-44ae-4635-b22f-235585b361b0	GET	undefined	/favicon.ico
 20230527	12:19:35	83c9d740-e8d0-40ba-9555-4cb994f0ef6e	GET	undefined	/
 20230527	12:19:35	da086e23-b26c-43e7-a3ae-369a32f54226	GET	undefined	/favicon.ico
+20230527	12:49:06	b2764ad7-10f7-4f0a-a803-5750e1d00262	POST	undefined	/register
+20230527	12:50:08	8f9e0c05-7f62-4a08-8ed2-ce1bc41f4686	POST	undefined	/register

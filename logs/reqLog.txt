@@ -6,3 +6,7 @@
 20230527	12:19:35	da086e23-b26c-43e7-a3ae-369a32f54226	GET	undefined	/favicon.ico
 20230527	12:49:06	b2764ad7-10f7-4f0a-a803-5750e1d00262	POST	undefined	/register
 20230527	12:50:08	8f9e0c05-7f62-4a08-8ed2-ce1bc41f4686	POST	undefined	/register
+20230527	13:08:09	03344994-73b7-4a84-a1ad-377eaf76b95b	POST	undefined	/auth
+20230527	13:09:44	c1e5c941-1eca-4404-a57a-d405212024bd	POST	undefined	/auth
+20230527	13:10:23	a963396a-9d2e-4213-a312-39e28c89e470	POST	undefined	/register
+20230527	13:10:39	48cb8fa6-8dc1-4dde-b8b9-d61dd4835b37	POST	undefined	/auth

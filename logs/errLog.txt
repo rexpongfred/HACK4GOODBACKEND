@@ -3,3 +3,8 @@
 20230527	12:19:26	55325f1f-5aed-4b4a-ad10-e111936c7aa3	ReferenceError: sendFile is not defined
 20230527	12:19:26	8d8ef4a3-3c12-4e69-9018-7e3018fb4e77	ReferenceError: sendFile is not defined
 20230527	12:19:35	e5c7b9bd-6642-4508-9cb3-783caf6c16aa	ReferenceError: sendFile is not defined
+20230527	13:26:57	8906a5eb-ddfe-46ac-9da8-f1d7c00d1914	TypeError: allowedOrigins.indexOf is not a function
+20230527	13:44:05	e8acb493-1d86-44a0-9997-29303a25ed65	TypeError: allowedOrigins.indexOf is not a function
+20230527	13:47:38	815911d8-8f96-4a4b-8a1e-c8475db499cc	TypeError: allowedOrigins.indexOf is not a function
+20230527	13:49:06	155f3d52-3f9a-4e58-b0b6-2e5c2f5b9c5d	TypeError: Cannot read properties of undefined (reading 'indexOf')
+20230527	13:49:53	53f2faf1-9f24-4ca6-867a-f1f59797e924	TypeError: allowedOrigins.indexOf is not a function

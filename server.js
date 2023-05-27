@@ -1,18 +1,18 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const { logger } = require("./middleware/logEvents");
-const errorHandler = require("./middlewawre/errorHandler");
+//const { logger } = require("./middleware/logEvents");
+//const errorHandler = require("./middlewawre/errorHandler");
 const PORT = process.env.PORT || 3500;
 
 // custom middleware logger
-app.use(logger);
+//app.use(logger);
 
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.json());
 
-app.use("/", require("./routes/root"));
+//app.use("/", require("./routes/root"));
 
 app.all("*", (req, res) => {
   res.status(404);
@@ -25,6 +25,6 @@ app.all("*", (req, res) => {
   }
 });
 
-app.use(errorHandler);
+//app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

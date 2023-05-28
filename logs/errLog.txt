@@ -10,3 +10,5 @@
 20230527	13:49:53	53f2faf1-9f24-4ca6-867a-f1f59797e924	TypeError: allowedOrigins.indexOf is not a function
 20230527	14:38:09	94062c92-1ac2-470f-be52-22c8d63cb31e	Error: ENOENT: no such file or directory, stat 'C:\Users\puach\Documents\Y1S2\Orbtial 2023 Cyfer\Orbital-2023-Cyfer-backend\routes\views\secret.html'
 20230527	14:38:55	c028533e-f7e7-4879-afc3-1aa7aedf14f2	Error: ENOENT: no such file or directory, stat 'C:\Users\puach\Documents\Y1S2\Orbtial 2023 Cyfer\Orbital-2023-Cyfer-backend\routes\views\testsecret.html'
+20230528	17:10:23	e29a3ae4-17f3-47fb-91bd-9a2e0c86246c	Error: Not allowed by CORS
+20230528	17:10:49	054a2f9a-672a-4992-a14d-8a52064a61dd	Error: Not allowed by CORS

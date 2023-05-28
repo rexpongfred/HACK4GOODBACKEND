@@ -17,6 +17,8 @@ app.use(logger);
 // and fetch cookies credentials requirement
 app.use(credentials);
 
+app.options("*", cors()); // include before other routes
+
 // Options for CORS
 app.use(cors(corsOptions));
 

@@ -41,7 +41,6 @@ app.use("/register", require("./routes/register"));
 app.use("/auth", require("./routes/auth"));
 app.use("/refresh", require("./routes/refresh"));
 app.use("/logout", require("./routes/logout"));
-app.use("/users", require("./routes/users"));
 
 app.use(verifyJWT);
 app.use("/secret", require("./routes/api/secretaccess"));

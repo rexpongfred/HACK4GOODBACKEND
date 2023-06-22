@@ -5,8 +5,10 @@ const walletsController = require("../../controllers/walletsController");
 router.route("/").post(walletsController.addWalletAddress);
 
 router
-    .route("/wallet/:walletaddress")
-    .get(walletsController.getContractsofaddress)
-    .post(walletsController.addContracttoaddress);
+    .route("/contracts/:address")
+    .get(walletsController.getContractsofaddress);
+//.post(walletsController.addContracttoaddress);
+
+// router.route("/editor").post(walletsController.addEditor);
 
 module.exports = router;

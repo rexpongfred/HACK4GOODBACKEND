@@ -16,7 +16,7 @@ const getContractsofaddress = async (req, res) => {
 // find the user of the account and the model for it and add the wallet address to the account
 const addWalletAddress = async (req, res) => {
     if (!req?.body?.address)
-        return res.status(400).json({ message: "contract address required" });
+        return res.status(400).json({ message: "wallet address required" });
     const user = await User.findOne({ username: req.user }).exec();
     if (!user) {
         return res.status(204).json({ message: `User not found` });
@@ -27,8 +27,28 @@ const addWalletAddress = async (req, res) => {
     res.json(updated);
 };
 
+// find the user of the account and the model for it then find the wallet then add the contract to the wallet
+const addContracttoaddress = async (req, res) => {
+    if (!req?.body?.walletaddress)
+        return res.status(400).json({ message: "wallet address required" });
+    const user = await User.findOne({ username: req.user }).exec();
+    if (!user) {
+        return res.status(204).json({ message: `User not found` });
+    }
+    const index = user.wallets.findIndex(
+        (wallet) => wallet.address == req.body.walletaddress
+    );
+    if (index == -1)
+        return res.status(400).json({ messgae: "invalid wallet address" });
+    if (!req?.body?.contractaddress)
+        return res.status(400).json({ message: "contract address required" });
+    user.wallets[index].owned.push(req.body.contractaddress);
+    const updated = await user.save();
+    res.json(updated);
+};
+
 module.exports = {
     getContractsofaddress,
     addWalletAddress,
-    // addContracttoaddress,
+    addContracttoaddress,
 };

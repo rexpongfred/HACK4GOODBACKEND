@@ -7,7 +7,8 @@ router.route("/").post(walletsController.addWalletAddress);
 router
     .route("/contracts/:address")
     .get(walletsController.getContractsofaddress);
-//.post(walletsController.addContracttoaddress);
+
+router.route("/addcontract").post(walletsController.addContracttoaddress);
 
 // router.route("/editor").post(walletsController.addEditor);
 

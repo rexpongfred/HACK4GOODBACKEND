@@ -181,3 +181,9 @@
 20230622	18:33:36	71e6a616-bc57-4bc4-b53e-02df0711004f	GET	undefined	/wallet/contracts/adsjoifjasd
 20230622	18:33:50	ac9d943f-b1fa-4274-ab8b-84aef733dc86	GET	undefined	/wallet/contracts/adsjoifjasd
 20230622	18:34:42	7d428b4d-2238-44c7-b15e-6023ac723845	GET	undefined	/wallet/contracts/adsjoifjasd
+20230622	18:51:03	d5f6ec09-04ae-4cb8-a9b9-feeeb6bd98ad	POST	undefined	/auth
+20230622	18:51:49	d263932d-acaa-4999-8dde-8b3d98a92697	GET	undefined	/wallet/addcontract
+20230622	18:51:59	3d6eed75-7480-4328-afb0-11b986e2ae1f	GET	undefined	/wallet/addcontract
+20230622	18:52:16	4b560f5d-e9ed-43a1-ab7b-51a2dbbfa854	POST	undefined	/wallet/addcontract
+20230622	18:52:33	8d6b3801-791b-4796-9a76-fdc2474b7763	POST	undefined	/wallet/addcontract
+20230622	18:53:08	c1c0974d-e80c-45fb-aa70-a3db22594da6	POST	undefined	/wallet/addcontract

@@ -10,6 +10,6 @@ router
 
 router.route("/addcontract").post(walletsController.addContracttoaddress);
 
-// router.route("/editor").post(walletsController.addEditor);
+router.route("/addeditor").post(walletsController.addEditor);
 
 module.exports = router;

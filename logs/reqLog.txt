@@ -187,3 +187,8 @@
 20230622	18:52:16	4b560f5d-e9ed-43a1-ab7b-51a2dbbfa854	POST	undefined	/wallet/addcontract
 20230622	18:52:33	8d6b3801-791b-4796-9a76-fdc2474b7763	POST	undefined	/wallet/addcontract
 20230622	18:53:08	c1c0974d-e80c-45fb-aa70-a3db22594da6	POST	undefined	/wallet/addcontract
+20230622	18:58:10	a034dece-0986-40ab-bce2-3da8ebe86d89	POST	undefined	/auth
+20230622	18:58:23	6ce804b3-e894-4ca6-af2c-96f26f708790	POST	undefined	/wallet
+20230622	19:00:33	7c5d814f-fc75-4197-a0f9-46c9447c60a0	POST	undefined	/wallet/addeditor
+20230622	19:00:48	2a9e94ce-9a2b-4892-b8b5-3b10d6a1b319	POST	undefined	/wallet/addeditor
+20230622	19:01:01	ad0e56cc-d045-459f-9afe-4c398f672342	POST	undefined	/wallet/addeditor

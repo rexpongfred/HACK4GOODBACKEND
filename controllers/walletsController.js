@@ -1,5 +1,11 @@
 const User = require("../model/User");
 
+const getAllWallet = async (req, res) => {
+    const user = await User.findOne({ username: req.user }).exec();
+    if (!user) return res.status(204).json({ message: "No users found" });
+    res.json(user.wallets);
+};
+
 // use the contract passed in the parameter and the username to find the contracts own by the wallet
 const getContractsofaddress = async (req, res) => {
     const user = await User.findOne({ username: req.user }).exec();
@@ -70,6 +76,7 @@ const addEditor = async (req, res) => {
 };
 
 module.exports = {
+    getAllWallet,
     getContractsofaddress,
     addWalletAddress,
     addContracttoaddress,

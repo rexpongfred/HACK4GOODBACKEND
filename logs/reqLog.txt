@@ -192,3 +192,5 @@
 20230622	19:00:33	7c5d814f-fc75-4197-a0f9-46c9447c60a0	POST	undefined	/wallet/addeditor
 20230622	19:00:48	2a9e94ce-9a2b-4892-b8b5-3b10d6a1b319	POST	undefined	/wallet/addeditor
 20230622	19:01:01	ad0e56cc-d045-459f-9afe-4c398f672342	POST	undefined	/wallet/addeditor
+20230622	22:42:25	4d592196-e262-46e5-9773-6604a29d019e	POST	undefined	/auth
+20230622	22:42:35	b034334e-5ac2-450b-8ecb-cd65c79b5838	GET	undefined	/wallet

@@ -2,7 +2,10 @@ const express = require("express");
 const router = express.Router();
 const walletsController = require("../../controllers/walletsController");
 
-router.route("/").post(walletsController.addWalletAddress);
+router
+    .route("/")
+    .get(walletsController.getAllWallet)
+    .post(walletsController.addWalletAddress);
 
 router
     .route("/contracts/:address")

@@ -45,6 +45,7 @@ app.use("/logout", require("./routes/logout"));
 app.use(verifyJWT);
 app.use("/secret", require("./routes/api/secretaccess"));
 app.use("/users", require("./routes/api/users"));
+app.use("/wallet", require("./routes/api/wallets"));
 
 app.all("*", (req, res) => {
     res.status(404);

@@ -75,10 +75,26 @@ const addEditor = async (req, res) => {
     res.json(updated);
 };
 
+const getContractAddress = async (req, res) => {
+    if (!req?.params?.txid)
+        return res.status(400).json({ message: "txid required" });
+    fetch(
+        `https://sync-testnet.vechain.org/transactions/0xe815175e54e37000ad79c73b111c3711d4987c8efeb8d2ef30876cbcdc758516/receipt`
+    )
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data);
+            res.json(data.outputs);
+        });
+};
+
 module.exports = {
     getAllWallet,
     getContractsofaddress,
     addWalletAddress,
     addContracttoaddress,
     addEditor,
+    getContractAddress,
 };

@@ -198,3 +198,9 @@
 20230626	13:33:20	23b47e0c-8fe7-4cfc-93ee-97ebc01bc1ac	GET	undefined	/favicon.ico
 20230626	13:35:38	ac12e4b9-d507-4c21-8153-4e998b98d461	GET	undefined	/
 20230626	13:35:39	be7a8957-3137-4ba3-ae4b-9f4eac005bfa	GET	undefined	/favicon.ico
+20230626	13:45:32	6630e034-8211-403e-aaa3-daca5fc07f67	POST	undefined	/auth
+20230626	13:45:41	c4239c63-6166-40ca-b58d-145c09733c67	GET	undefined	/wallet/getcontractaddress/asdf
+20230626	13:45:54	9c0e14e4-2bcf-4172-a7a2-38511ee4b85d	GET	undefined	/wallet/getcontractaddress/asdf
+20230626	13:46:29	59fa87dd-1ab3-4e04-9ed5-9f896328bb6c	GET	undefined	/wallet/getcontractaddress/asdf
+20230626	13:47:27	b14f2408-ceba-4b8d-943e-773d940e9bc7	GET	undefined	/wallet/getcontractaddress/asdf
+20230626	13:47:52	56c7278f-5322-47f6-a901-252e8920b0e4	GET	undefined	/wallet/getcontractaddress/asdf

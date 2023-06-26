@@ -15,4 +15,8 @@ router.route("/addcontract").post(walletsController.addContracttoaddress);
 
 router.route("/addeditor").post(walletsController.addEditor);
 
+router
+    .route("/getcontractaddress/:txid")
+    .get(walletsController.getContractAddress);
+
 module.exports = router;

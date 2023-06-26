@@ -1,4 +1,5 @@
 const User = require("../model/User");
+const axios = require("axios");
 
 const getAllWallet = async (req, res) => {
     const user = await User.findOne({ username: req.user }).exec();
@@ -78,16 +79,15 @@ const addEditor = async (req, res) => {
 const getContractAddress = async (req, res) => {
     if (!req?.params?.txid)
         return res.status(400).json({ message: "txid required" });
-    await fetch(
-        `https://sync-testnet.vechain.org/transactions/${req.params.txid}/receipt`
-    )
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            console.log(data);
-            res.json(data.outputs);
-        });
+    try {
+        const resp = await axios.get(
+            `https://sync-testnet.vechain.org/transactions/${req.params.txid}/receipt`
+        );
+        console.log(resp.data);
+        res.json(resp.data.outputs);
+    } catch (err) {
+        console.log(err);
+    }
 };
 
 module.exports = {

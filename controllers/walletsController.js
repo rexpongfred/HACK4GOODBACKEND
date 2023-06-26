@@ -83,7 +83,7 @@ const getContractAddress = async (req, res) => {
         const resp = await axios.get(
             `https://sync-testnet.vechain.org/transactions/${req.params.txid}/receipt`
         );
-        console.log(resp.data);
+        console.log(resp);
         res.json(resp.data.outputs);
     } catch (err) {
         console.log(err);

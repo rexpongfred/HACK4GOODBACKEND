@@ -79,7 +79,7 @@ const getContractAddress = async (req, res) => {
     if (!req?.params?.txid)
         return res.status(400).json({ message: "txid required" });
     fetch(
-        `https://sync-testnet.vechain.org/transactions/0xe815175e54e37000ad79c73b111c3711d4987c8efeb8d2ef30876cbcdc758516/receipt`
+        `https://sync-testnet.vechain.org/transactions/${req.params.txid}/receipt`
     )
         .then((response) => {
             return response.json();

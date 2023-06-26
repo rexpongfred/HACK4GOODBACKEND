@@ -79,6 +79,7 @@ const addEditor = async (req, res) => {
 const getContractAddress = async (req, res) => {
     if (!req?.params?.txid)
         return res.status(400).json({ message: "txid required" });
+    await sleep(3000);
     try {
         const resp = await axios.get(
             `https://sync-testnet.vechain.org/transactions/${req.params.txid}/receipt`,

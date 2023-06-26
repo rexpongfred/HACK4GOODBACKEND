@@ -81,7 +81,12 @@ const getContractAddress = async (req, res) => {
         return res.status(400).json({ message: "txid required" });
     try {
         const resp = await axios.get(
-            `https://sync-testnet.vechain.org/transactions/${req.params.txid}/receipt`
+            `https://sync-testnet.vechain.org/transactions/${req.params.txid}/receipt`,
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
         );
         console.log(resp);
         res.json(resp.data.outputs);

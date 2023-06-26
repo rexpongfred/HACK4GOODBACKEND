@@ -88,8 +88,8 @@ const getContractAddress = async (req, res) => {
                 },
             }
         );
-        console.log(resp);
-        res.json(resp.data.outputs);
+        console.log(resp.data.outputs[0].contractAddress);
+        res.json(resp.data.outputs[0].contractAddress);
     } catch (err) {
         console.log(err);
     }

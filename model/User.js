@@ -28,7 +28,7 @@ const userSchema = new Schema({
         required: true,
     },
     wallets: [walletSchema],
-    refreshToken: String,
+    refreshToken: [String],
 });
 
 module.exports = mongoose.model("User", userSchema);

@@ -19,4 +19,8 @@ router
     .route("/getcontractaddress/:txid")
     .get(walletsController.getContractAddress);
 
+router
+    .route("/gettransactionhistory/:walletaddress")
+    .get(walletsController.getTransactions);
+
 module.exports = router;

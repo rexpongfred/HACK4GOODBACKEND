@@ -95,6 +95,25 @@ const getContractAddress = async (req, res) => {
     }
 };
 
+const getTransactions = async (req, res) => {
+    if (!req?.params?.walletaddress)
+        return res.status(400).json({ message: "wallet address required" });
+    try {
+        const resp = await axios.get(
+            `https://explore-testnet.vechain.org/api/accounts/${req.params.walletaddress}/transactions`,
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        );
+        console.log(resp.data.outputs[0].count);
+        res.json(resp.data.outputs[0].count);
+    } catch (err) {
+        console.log(err);
+    }
+};
+
 module.exports = {
     getAllWallet,
     getContractsofaddress,

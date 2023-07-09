@@ -222,3 +222,15 @@
 20230626	15:47:04	3f0e55af-28ea-4d19-9686-faeed3d9b713	GET	undefined	/wallet/getcontractaddress/0x8339941c33f6e182ce5304947940081ae8279d9b05b601d4bbf75137e4de7569
 20230626	15:47:59	398e7235-e663-44c0-ae39-6ac683a65141	GET	undefined	/wallet/getcontractaddress/0x8339941c33f6e182ce5304947940081ae8279d9b05b601d4bbf75137e4de7569
 20230626	15:49:49	2cd0343c-8aec-43d2-a3c3-91ef1facc74f	GET	undefined	/wallet/getcontractaddress/0x8339941c33f6e182ce5304947940081ae8279d9b05b601d4bbf75137e4de7569
+20230709	17:01:21	bfe140bf-bf0b-41bf-98cf-d2835d3dfd4b	GET	undefined	/wallet/gettransaction/0xfc1ec5e12b4a64a3ab132807b33525aa09abb5a6
+20230709	17:01:31	d6a89ec6-2136-42c4-9fad-0fbb605b2068	POST	undefined	/auth
+20230709	17:01:47	9689505e-f503-4d25-ada5-6804b59df5c5	GET	undefined	/wallet/gettransaction/0xfc1ec5e12b4a64a3ab132807b33525aa09abb5a6
+20230709	17:02:57	959e8b6b-a60d-45f8-ba09-1e1d69c71fa6	GET	undefined	/wallet/getjson
+20230709	17:03:06	a0e6c677-1fcb-4d41-afca-e8ad13ce7173	GET	undefined	/wallet/getjson
+20230709	17:03:23	c90e431d-377c-4493-ac5d-bf52cf63eae3	GET	undefined	/wallet/getjson/0xa850d4718bd49d0a483efa58fd23344a82c7f8845feeada33f232b29bc8ecb4a
+20230709	17:11:21	abb75d89-bc40-4a6c-9b94-b7396bffcf18	OPTIONS	http://localhost:3000	/auth
+20230709	17:11:21	f8111dc3-dfed-4e64-9e9d-03ec2d3bc65e	POST	http://localhost:3000	/auth
+20230709	17:11:24	a9715177-47e4-43a9-baca-d0aacd5d3a07	POST	http://localhost:3000	/auth
+20230709	17:11:25	0e3535cc-b3dd-4f1b-9e70-e99f3fb3b58d	POST	http://localhost:3000	/auth
+20230709	17:11:32	4011f28f-0c84-40c2-9d92-95eeb2802a0c	OPTIONS	http://localhost:3000	/auth
+20230709	17:11:32	29776f2d-b3f4-4ea3-86be-2e04b3ea7f35	POST	http://localhost:3000	/auth

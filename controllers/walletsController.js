@@ -95,7 +95,7 @@ const getContractAddress = async (req, res) => {
     }
 };
 
-const getJson = async (req, res) => {
+const gettxJson = async (req, res) => {
     if (!req?.params?.txid)
         return res.status(400).json({ message: "txid required" });
     try {
@@ -141,5 +141,5 @@ module.exports = {
     addEditor,
     getContractAddress,
     getTransactions,
-    getJson
+    gettxJson,
 };

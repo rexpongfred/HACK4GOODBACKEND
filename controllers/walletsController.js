@@ -95,6 +95,25 @@ const getContractAddress = async (req, res) => {
     }
 };
 
+const getJson = async (req, res) => {
+    if (!req?.params?.txid)
+        return res.status(400).json({ message: "txid required" });
+    try {
+        const resp = await axios.get(
+            `https://sync-testnet.vechain.org/transactions/${req.params.txid}/receipt`,
+            {
+                headers: {
+                    "Content-Type": "application/json",
+                },
+            }
+        );
+        console.log(resp.data);
+        res.json(resp.data);
+    } catch (err) {
+        console.log(err);
+    }
+};
+
 const getTransactions = async (req, res) => {
     if (!req?.params?.walletaddress)
         return res.status(400).json({ message: "wallet address required" });
@@ -107,8 +126,8 @@ const getTransactions = async (req, res) => {
                 },
             }
         );
-        console.log(resp.data.outputs[0].count);
-        res.json(resp.data.outputs[0].count);
+        console.log(resp.data);
+        res.json(resp.data);
     } catch (err) {
         console.log(err);
     }
@@ -121,4 +140,6 @@ module.exports = {
     addContracttoaddress,
     addEditor,
     getContractAddress,
+    getTransactions,
+    getJson
 };

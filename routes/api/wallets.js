@@ -20,7 +20,11 @@ router
     .get(walletsController.getContractAddress);
 
 router
-    .route("/gettransactionhistory/:walletaddress")
+    .route("/gettransaction/:walletaddress")
     .get(walletsController.getTransactions);
+
+router
+    .route("/getjson/:txid")
+    .get(walletsController.getJson);
 
 module.exports = router;

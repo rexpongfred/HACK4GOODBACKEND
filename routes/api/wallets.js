@@ -19,4 +19,10 @@ router
     .route("/getcontractaddress/:txid")
     .get(walletsController.getContractAddress);
 
+router
+    .route("/gettransaction/:walletaddress")
+    .get(walletsController.getTransactions);
+
+router.route("/gettxjson/:txid").get(walletsController.gettxJson);
+
 module.exports = router;

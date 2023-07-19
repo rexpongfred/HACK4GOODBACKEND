@@ -1,3 +1,4 @@
+const Contract = require("../model/Contract");
 const User = require("../model/User");
 const axios = require("axios");
 
@@ -133,6 +134,62 @@ const getTransactions = async (req, res) => {
     }
 };
 
+// const testFunction = async (req, res) => {
+//     if (!req?.body?.contractaddress)
+//         return res.status(400).json({ message: "contract address required" });
+//     if (!req?.body?.walletaddress)
+//         return res.status(400).json({ message: "wallet address required" });
+//     if (!req?.body?.username)
+//         return res.status(400).json({ message: "username required" });
+//     try {
+//         const result = await Contract.create({
+//             contractAddress: req.body.contractaddress,
+//             owner: {
+//                 username: req.body.username,
+//                 walletAddress: req.body.walletaddress,
+//             },
+//             addedUsers: [],
+//         });
+
+//         console.log(result);
+//         res.status(201).json({ success: "New contract Created " });
+//     } catch (err) {
+//         res.status(500).json({ message: err.message });
+//     }
+// };
+
+const testFunction = async (req, res) => {
+    if (!req?.body?.contractaddress)
+        return res.status(400).json({ message: "contract address required" });
+    if (!req?.body?.walletaddress)
+        return res.status(400).json({ message: "wallet address required" });
+    if (!req?.body?.username)
+        return res.status(400).json({ message: "username required" });
+    try {
+        const foundContract = await Contract.findOne({
+            contractAddress: req.body.contractaddress,
+        });
+        if (!foundContract) {
+            return res.status(204).json({ message: `Contract not found` });
+        }
+        founduser = foundContract.addedUsers.find(
+            (user) => user.username === req.body.username
+        );
+        if (founduser) {
+            return res.status(400).json({ message: "user already exist" });
+        }
+        foundContract.addedUsers.push({
+            username: req.body.username,
+            walletAddress: req.body.walletaddress,
+        });
+        const updated = await foundContract.save();
+        console.log(updated);
+        res.status(201).json({ success: "New user added!" });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
+
 module.exports = {
     getAllWallet,
     getContractsofaddress,
@@ -142,4 +199,5 @@ module.exports = {
     getContractAddress,
     getTransactions,
     gettxJson,
+    testFunction,
 };

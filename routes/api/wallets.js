@@ -25,4 +25,6 @@ router
 
 router.route("/gettxjson/:txid").get(walletsController.gettxJson);
 
+router.route("/testcontract").post(walletsController.testFunction);
+
 module.exports = router;

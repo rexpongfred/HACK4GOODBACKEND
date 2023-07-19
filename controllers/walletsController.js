@@ -52,7 +52,23 @@ const addContracttoaddress = async (req, res) => {
         return res.status(400).json({ message: "contract address required" });
     user.wallets[index].owned.push(req.body.contractaddress);
     const updated = await user.save();
-    res.json(updated);
+    // ContractDB
+    try {
+        const result = await Contract.create({
+            contractAddress: req.body.contractaddress,
+            owner: {
+                username: req.user,
+                walletAddress: req.body.walletaddress,
+            },
+            addedUsers: [],
+        });
+
+        console.log(result);
+        res.json(updated);
+        //res.status(201).json({ success: "New contract Created " });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
 };
 
 // find the user of the account and the model for it then find the wallet then add the contract to the wallet
@@ -74,6 +90,29 @@ const addEditor = async (req, res) => {
         return res.status(400).json({ message: "contract address required" });
     user.wallets[index].editor.push(req.body.contractaddress);
     const updated = await user.save();
+    // ContractDB
+    try {
+        const foundContract = await Contract.findOne({
+            contractAddress: req.body.contractaddress,
+        });
+        if (!foundContract) {
+            return res.status(204).json({ message: `Contract not found` });
+        }
+        founduser = foundContract.addedUsers.find(
+            (user) => user.username === req.body.editor
+        );
+        if (founduser) {
+            return res.status(400).json({ message: "user already exist" });
+        }
+        foundContract.addedUsers.push({
+            username: req.body.editor,
+            walletAddress: req.body.walletaddress,
+        });
+        const updated = await foundContract.save();
+        console.log(updated);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
     res.json(updated);
 };
 
@@ -134,7 +173,44 @@ const getTransactions = async (req, res) => {
     }
 };
 
-// const testFunction = async (req, res) => {
+const getContractUsers = async (req, res) => {
+    if (!req?.params?.contractaddress)
+        return res.status(400).json({ message: "contract address required" });
+    try {
+        const foundContract = await Contract.findOne({
+            contractAddress: req.params.contractaddress,
+        });
+        const userarray = [foundContract.owner, ...foundContract.addedUsers];
+        console.log(foundContract);
+        res.json(userarray);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
+
+// const addContractDB = async (req, res) => {
+//     if (!req?.body?.contractaddress)
+//         return res.status(400).json({ message: "contract address required" });
+//     if (!req?.body?.walletaddress)
+//         return res.status(400).json({ message: "wallet address required" });
+//     try {
+//         const result = await Contract.create({
+//             contractAddress: req.body.contractaddress,
+//             owner: {
+//                 username: req.user,
+//                 walletAddress: req.body.walletaddress,
+//             },
+//             addedUsers: [],
+//         });
+
+//         console.log(result);
+//         //res.status(201).json({ success: "New contract Created " });
+//     } catch (err) {
+//         res.status(500).json({ message: err.message });
+//     }
+// };
+
+// const AddUserContractDB = async (req, res) => {
 //     if (!req?.body?.contractaddress)
 //         return res.status(400).json({ message: "contract address required" });
 //     if (!req?.body?.walletaddress)
@@ -142,53 +218,29 @@ const getTransactions = async (req, res) => {
 //     if (!req?.body?.username)
 //         return res.status(400).json({ message: "username required" });
 //     try {
-//         const result = await Contract.create({
+//         const foundContract = await Contract.findOne({
 //             contractAddress: req.body.contractaddress,
-//             owner: {
-//                 username: req.body.username,
-//                 walletAddress: req.body.walletaddress,
-//             },
-//             addedUsers: [],
 //         });
-
-//         console.log(result);
-//         res.status(201).json({ success: "New contract Created " });
+//         if (!foundContract) {
+//             return res.status(204).json({ message: `Contract not found` });
+//         }
+//         founduser = foundContract.addedUsers.find(
+//             (user) => user.username === req.body.username
+//         );
+//         if (founduser) {
+//             return res.status(400).json({ message: "user already exist" });
+//         }
+//         foundContract.addedUsers.push({
+//             username: req.body.username,
+//             walletAddress: req.body.walletaddress,
+//         });
+//         const updated = await foundContract.save();
+//         console.log(updated);
+//         res.status(201).json({ success: "New user added!" });
 //     } catch (err) {
 //         res.status(500).json({ message: err.message });
 //     }
 // };
-
-const testFunction = async (req, res) => {
-    if (!req?.body?.contractaddress)
-        return res.status(400).json({ message: "contract address required" });
-    if (!req?.body?.walletaddress)
-        return res.status(400).json({ message: "wallet address required" });
-    if (!req?.body?.username)
-        return res.status(400).json({ message: "username required" });
-    try {
-        const foundContract = await Contract.findOne({
-            contractAddress: req.body.contractaddress,
-        });
-        if (!foundContract) {
-            return res.status(204).json({ message: `Contract not found` });
-        }
-        founduser = foundContract.addedUsers.find(
-            (user) => user.username === req.body.username
-        );
-        if (founduser) {
-            return res.status(400).json({ message: "user already exist" });
-        }
-        foundContract.addedUsers.push({
-            username: req.body.username,
-            walletAddress: req.body.walletaddress,
-        });
-        const updated = await foundContract.save();
-        console.log(updated);
-        res.status(201).json({ success: "New user added!" });
-    } catch (err) {
-        res.status(500).json({ message: err.message });
-    }
-};
 
 module.exports = {
     getAllWallet,
@@ -199,5 +251,5 @@ module.exports = {
     getContractAddress,
     getTransactions,
     gettxJson,
-    testFunction,
+    getContractUsers,
 };

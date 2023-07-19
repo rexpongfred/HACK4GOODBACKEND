@@ -260,3 +260,13 @@
 20230719	11:38:10	61c1e81c-97c1-4175-87fe-abc919ea1289	POST	undefined	/wallet/testcontract
 20230719	11:39:55	b9113bad-8995-41ec-9f5c-8ec05e4a23f0	POST	undefined	/wallet/testcontract
 20230719	11:40:00	3df4a759-8bcf-474c-9c71-3b2dab49d886	POST	undefined	/wallet/testcontract
+20230719	12:08:57	a72979e0-d366-483a-ab68-1aeb611d3a0b	POST	undefined	/wallet/addcontract
+20230719	12:09:20	408fec9b-f108-414c-8fc4-e12796e0a49b	POST	undefined	/wallet/addcontract
+20230719	12:10:56	c41b9713-e6a2-4ad4-9445-53f5de02c1c4	POST	undefined	/wallet/addeditor
+20230719	12:11:06	9a82f480-93d8-4618-ae88-47c86ac33b0a	POST	undefined	/wallet/addeditor
+20230719	13:06:05	1045a806-fa4c-4a1c-9ca6-7d9226260e9b	GET	undefined	/wallet/getcontractusers/19072023
+20230719	13:06:13	15e618ef-e60a-468c-bb39-e337bd4c832b	GET	undefined	/wallet/getcontractusers/19072023
+20230719	13:06:54	21190a40-c9f7-4846-bad4-73d2613033c4	GET	undefined	/wallet/getcontractusers/19072023
+20230719	13:07:42	01265cc8-2d8b-4902-9a87-d6a89945ba2b	GET	undefined	/wallet/getcontractusers/19072023
+20230719	13:08:29	264e1d2f-7aa9-4df7-8d7c-3efa89f44cb7	GET	undefined	/wallet/getcontractusers/19072023
+20230719	13:09:13	949cf3a2-3fe2-4b34-b5ce-df00829d64d2	GET	undefined	/wallet/getcontractusers/19072023

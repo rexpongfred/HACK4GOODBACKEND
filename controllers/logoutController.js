@@ -4,7 +4,8 @@ const handleLogout = async (req, res) => {
     // On client also delete accessToken
 
     const cookies = req.cookies;
-    if (!cookies?.jwt) return res.sendStatus(204); //No content
+    if (!cookies?.jwt)
+        return res.status(200).json({ message: "no cookie found" }); //No content
     const refreshToken = cookies.jwt;
 
     // Is RefreshToken in DB
@@ -15,7 +16,7 @@ const handleLogout = async (req, res) => {
             sameSite: "None",
             secure: true,
         });
-        return res.sendStatus(204);
+        return res.status(200).json({ message: "no user found" });
     }
 
     // Delete refreshtoken in db
@@ -28,7 +29,7 @@ const handleLogout = async (req, res) => {
         sameSite: "None",
         //secure:true
     });
-    res.sendStatus(204);
+    res.sendStatus(200).json({ message: `${foundUser.username} logged out` });
 };
 
 module.exports = { handleLogout };

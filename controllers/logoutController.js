@@ -29,7 +29,7 @@ const handleLogout = async (req, res) => {
         sameSite: "None",
         //secure:true
     });
-    res.sendStatus(200).json({ message: `${foundUser.username} logged out` });
+    res.status(200).json({ message: `${foundUser.username} logged out` });
 };
 
 module.exports = { handleLogout };

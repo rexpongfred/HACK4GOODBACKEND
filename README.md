@@ -1,2 +1,2 @@
-# Orbital-2023-Cyfer-backend
-backend for our Orbital project
+# HACK4GOOD-backend
+backend for our HACK4GOOD project

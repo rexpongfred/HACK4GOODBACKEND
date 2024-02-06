@@ -1,15 +1,6 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const walletSchema = new Schema({
-    address: {
-        type: String,
-        required: true,
-    },
-    owned: [String],
-    editor: [String],
-});
-
 const userSchema = new Schema({
     username: {
         type: String,
@@ -27,7 +18,6 @@ const userSchema = new Schema({
         type: String,
         required: true,
     },
-    wallets: [walletSchema],
     refreshToken: [String],
 });
 

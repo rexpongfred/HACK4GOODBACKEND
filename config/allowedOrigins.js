@@ -1,5 +1,5 @@
 const allowedOrigins = [
-    "https://main--rexpongfred.netlify.app",
+    "https://rexpongfred.netlify.app",
     "http://localhost:3000",
 ];
 

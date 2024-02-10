@@ -28,3 +28,5 @@
 20240210	13:05:32	ea8b081e-216c-4bbd-b47b-b64f34935a7a	Error: Not allowed by CORS
 20240210	13:07:58	31c81401-f78b-4889-8e49-098435706cba	Error: Not allowed by CORS
 20240210	13:07:58	30e4ee4d-a87c-409f-9441-26956ef405b6	Error: Not allowed by CORS
+20240210	23:36:59	200e3ef3-4972-4d63-9f8d-8b79ea7212f2	Error: Not allowed by CORS
+20240210	23:36:59	4b15c5a1-2629-4132-931c-67d3c26c1be9	Error: Not allowed by CORS

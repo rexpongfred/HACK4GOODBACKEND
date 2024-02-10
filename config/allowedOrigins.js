@@ -1,9 +1,6 @@
 const allowedOrigins = [
-    "https://mysite.com",
+    "https://main--rexpongfred.netlify.app",
     "http://localhost:3000",
-    "https://helpful-malasada-4d69b0.netlify.app/login",
-    "https://helpful-malasada-4d69b0.netlify.app",
-    "https://cyfer.netlify.app",
 ];
 
 module.exports = allowedOrigins;
